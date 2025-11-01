@@ -6,15 +6,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rishtea</title>
     <link rel="stylesheet" href="css/main.css">
+
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script>
+        window.onload = () => {
+            let header = document.getElementsByClassName('header')[0];
+            window.addEventListener('scroll', () => {
+
+                let scrollBar = window.scrollY; //화면의 세로 스크롤바의 값
+
+                //스크롤바의 값이 200보다 크면 실행
+                if (scrollBar > 200) {
+                    header.classList.add('active');
+                } else {
+                    header.classList.remove('active');
+                }
+            });//스크롤바 내리면 헤더BG생성
+
+            let onBtn = document.getElementsByClassName('on')[0];
+            let offBtn = document.getElementsByClassName('off')[0];
+            let searchBox = document.getElementsByClassName('search_box')[0];
+
+            onBtn.addEventListener('click', () => {
+                searchBox.style.display = 'block';
+                offBtn.style.display = 'block';
+                onBtn.style.display = 'none';
+            });
+            offBtn.addEventListener('click', () => {
+                searchBox.style.display = 'none';
+                offBtn.style.display = 'none';
+                onBtn.style.display = 'block';
+            });//검색 클릭하면 검색박스 나타나기
+
+            document.querySelector('.menu_btn').addEventListener('click', () => {
+                document.querySelector('.nav').classList.toggle('active');
+                /* document.querySelector('body').classList.toggle('active'); */
+            });
+            document.querySelector('.close_btn').addEventListener('click', () => {
+                document.querySelector('.nav').classList.remove('active');
+            });//nav 열고 닫기
+
+
+            $('.nav .depth-01').on('click', function () {
+                //alert(); 테스트 후 주석처리
+                $('.nav .depth-02').slideUp(); //*순서 중요
+                $(this).siblings('.depth-02').slideDown(); //siblings:모든 형제 선택자들 찾기. 가장 많이 쓰임
+
+                //모든 .depth-01에게 클래스명 active삭제 removeClass('active')
+                //내가 클릭한 요소에게 클래스명 active추가 addClass('active')
+                $('.nav .depth-01').removeClass('active');
+                $(this).addClass('active');
+            });
+
+
+
+
+
+        };//script end
+
+
+    </script>
 </head>
 
 <body>
     <div id="wrap">
 
         <header class="header">
+
+            <div class="inner">
+                <h1 class="logo">
+                    <a href="#"><img src="img/icon/logo.svg" alt="로고"></a>
+                </h1><!-- logo -->
+
+                <div class="menu_btn">
+                    <a href="#"><img src="img/icon/menu_btn.png" alt="메뉴 버튼"></a>
+                </div><!-- menu_btn -->
+
+                <nav class="nav">
+                    <button class="close_btn">
+                        <img src="img/icon/close_btn.png" alt="닫기 버튼">
+                    </button><!-- close_btn end -->
+                    <ul class="gnb">
+                        <li>
+                            <a href="#" class="depth-01">ABOUT</a>
+                        </li>
+                        <li>
+                            <a href="#" class="depth-01">SHOP</a>
+                            <ul class="depth-02">
+                                <li><a href="#">All Products</a></li>
+                                <li><a href="#">Loose Leaf Tea</a></li>
+                                <li><a href="#">Tea Bag</a></li>
+                                <li><a href="#">Teaware</a></li>
+                                <li><a href="#">Gift Set</a></li>
+                                <li><a href="#">Caffeine-Free</a></li>
+                                <li><a href="#">Seasonal Collection</a></li>
+                            </ul><!-- .depth-02 end -->
+                        </li>
+                        <li>
+                            <a href="#" class="depth-01">TEA GUIDE</a>
+                        </li>
+                        <li>
+                            <a href="#" class="depth-01">COMMUNITY</a>
+                            <ul class="depth-02">
+        
+                                <li><a href="#">Notice</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Event / Blog</a></li>
+                            </ul><!-- .depth-02 end -->
+                        </li>
+                        <li>
+                            <a href="#" class="depth-01">MY PAGE</a>
+                        </li>
+                    </ul><!-- .gnb end -->
+                </nav><!-- nav -->
+
+                <div class="util_wrap">
+                    <div class="search_wrap">
+                        <button class="on">검색</button>
+                        <button class="off">검색</button>
+                    </div><!-- search_wrap -->
+                    <div class="search_box">
+                        <input type="text" name="" id="" placeholder="상품검색 또는 주문번호를 입력해주세요.">
+                    </div><!-- search_box -->
+
+                    <ul class="util">
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">장바구니</a></li>
+                    </ul><!-- util -->
+                </div><!-- util_wrap -->
+
+            </div><!-- inner -->
         </header><!-- header -->
 
         <main class="main">
+            <section class="main_visual">
+                <img src="img/main-img-01.jpg" alt="메인비주얼img">
+
+                <div class="text_wrap">
+                    <div class="title_wrap">
+                        <h1></h1>
+                        <p></p>
+                    </div><!-- title_wrap -->
+
+                    <div class="btn_wrap">
+                        <div class="btn_text">
+                            <a href="#">SHOP NOW</a>
+                        </div><!-- btn_text -->
+
+                        <div class="btn_icon">
+                            <a href="#"><img src="img/icon/arrow_btn 1.png" alt="shop now화살표"></a>
+                        </div><!-- btn_icon -->
+
+                    </div><!-- btn_wrap -->
+                </div><!-- text_wrap -->
+
+            </section><!-- main_visual -->
         </main><!-- main -->
 
         <footer class="footer">

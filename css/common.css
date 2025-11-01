@@ -1,0 +1,43 @@
+@charset "utf-8";
+@import url(main.css);
+/* root 설정 */
+
+:root { 
+    --fontSize-util: 1.5rem; /* 15px */
+    --fontSize-nav-depth-01: 2.2rem;
+    --fontSize-nav-depth-02: 2rem;
+
+    /* --fontSize-md: 18px;
+    --fontSize-sm: 15px;
+    --fontSize-xs: 13px; */
+
+
+    --color-nav-bg: #005B3C; /* 아코디언nav BG */
+    --color-nav-text: #E9E3D2; /* 아코디언nav text */
+
+
+    --margin-b-lg: 40px; /* margin-bottom-큰 영역 */
+    --margin-b-md: 40px; /* margin-bottom-중간 영역 */
+}
+
+
+
+/* 공통스타일 정리 */
+.header .inner {
+    max-width: 1440px;
+    width: calc(100% - 32px);
+    margin: 0 auto;
+}
+
+/* 아코디언 nav */
+.header .inner nav .gnb>li .depth-01, 
+.header .inner nav .gnb>li .depth-02 {
+    font-family: 'Times New Roman';
+    font-weight: 400;
+    line-height: 140%;
+    color: var(--color-nav-text);
+}
+
+.header .inner nav .gnb>li .depth-01{ 
+
+}
