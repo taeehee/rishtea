@@ -638,6 +638,37 @@ font-size:10px로 초기값 설정. */
 }
 
 
+/* footer */
+.footer {}
+.footer .inner {}
+.footer .inner .text_wrap {}
+.footer .inner .text_wrap .logo {}
+.footer .inner .text_wrap .logo img {}
+
+.footer .inner .text_wrap .info_wrap {}
+.footer .inner .text_wrap .info_wrap .wrap_01 {}
+.footer .inner .text_wrap .info_wrap .wrap_01 span {}
+.footer .inner .text_wrap .info_wrap .wrap_01 p {}
+
+.footer .inner .text_wrap .info_wrap .wrap_02 {}
+.footer .inner .text_wrap .info_wrap .wrap_02 .fax {}
+.footer .inner .text_wrap .info_wrap .wrap_02 .fax p {}
+
+.footer .inner .text_wrap .info_wrap .wrap_02 .kakao {}
+.footer .inner .text_wrap .info_wrap .wrap_02 .kakao p {}
+
+.footer .inner .text_wrap .info_wrap .wrap_02 .e-mail {}
+.footer .inner .text_wrap .info_wrap .wrap_02 .e-mail p{}
+
+.footer .inner .text_wrap .address_wrap {}
+.footer .inner .text_wrap .address_wrap p {}
+.footer .inner .text_wrap .address_wrap .num {}
+.footer .inner .text_wrap .address_wrap .num span {}
+
+.footer .inner .rights {}
+.footer .inner .rights p {}
+
+
 
 
 
