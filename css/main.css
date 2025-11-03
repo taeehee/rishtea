@@ -291,6 +291,13 @@ font-size:10px로 초기값 설정. */
     /* 내용물에 따라 높이 자동 조절 */
 }
 
+.best_seller .swiper-wrapper .swiper-slide:hover .des_wrap {
+    /* display: flex; */
+    /* block, flex */
+    opacity: 1;
+    visibility: visible;
+}
+
 .best_seller .swiper-wrapper .swiper-slide .image_sec {
     width: 100%;
 }
@@ -332,10 +339,13 @@ font-size:10px로 초기값 설정. */
     height: 100%;
 }
 
-.best_seller .swiper-wrapper .swiper-slide .text_sec .des_sec {
+.best_seller .swiper-wrapper .swiper-slide .text_sec .des_wrap {
     width: 100%;
     padding: 1rem;
     /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .best_seller .swiper-wrapper .swiper-slide .text_sec .des_sec .des_wrap {
