@@ -291,9 +291,7 @@ font-size:10px로 초기값 설정. */
     /* 내용물에 따라 높이 자동 조절 */
 }
 
-.best_seller .swiper-wrapper .swiper-slide:hover .des_wrap {
-    /* display: flex; */
-    /* block, flex */
+.best_seller .swiper-wrapper .swiper-slide:hover .text_sec .des_wrap {
     opacity: 1;
     visibility: visible;
 }
@@ -302,9 +300,23 @@ font-size:10px로 초기값 설정. */
     width: 100%;
 }
 
-.best_seller .swiper-wrapper .swiper-slide .image_sec:hover {
-    content: 'url(img/카모마일메들리02.jpg)';
+
+.best_seller .swiper-wrapper .swiper-slide .image_sec .before {
+    display: flex;
 }
+
+.best_seller .swiper-wrapper .swiper-slide .image_sec .after {
+    display: none;
+}
+
+.best_seller .swiper-wrapper .swiper-slide:hover .image_sec .before {
+    display: none;
+}
+
+.best_seller .swiper-wrapper .swiper-slide:hover .image_sec .after {
+    display: flex;
+}
+
 
 .best_seller .swiper-wrapper .swiper-slide .image_sec img {
     width: 100%;
@@ -342,7 +354,6 @@ font-size:10px로 초기값 설정. */
 .best_seller .swiper-wrapper .swiper-slide .text_sec .des_wrap {
     width: 100%;
     padding: 1rem;
-    /* display: none; */
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -403,6 +414,11 @@ font-size:10px로 초기값 설정. */
     /* 내용물에 따라 높이 자동 조절 */
 }
 
+.new_arrivals .swiper-wrapper .swiper-slide:hover .text_sec .des_wrap {
+    opacity: 1;
+    visibility: visible;
+}
+
 .new_arrivals .swiper-wrapper .swiper-slide .image_sec {
     width: 100%;
 }
@@ -447,12 +463,14 @@ font-size:10px로 초기값 설정. */
 .new_arrivals .swiper-wrapper .swiper-slide .text_sec .des_sec {
     width: 100%;
     padding: 1rem;
-    /* display: none; */
 }
 
-.new_arrivals .swiper-wrapper .swiper-slide .text_sec .des_sec .des_wrap {
-    gap: 0.6rem;
+.new_arrivals .swiper-wrapper .swiper-slide .text_sec .des_wrap {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
+
 
 .new_arrivals .swiper-wrapper .swiper-slide .text_sec .des_sec .des_wrap p {
     margin-bottom: 0.6rem;
@@ -592,6 +610,7 @@ font-size:10px로 초기값 설정. */
     width: 100%;
     padding: 6rem 2rem 7.8rem 2rem;
 }
+
 .insta .inner .title {
     width: 100%;
     text-align: center;
@@ -604,31 +623,33 @@ font-size:10px로 초기값 설정. */
 
 .insta .inner .list {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
 }
+
 .insta .inner .list .item {
-    width: 100%; /* 18.61%; */
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
+
 .insta .inner .list .item a {
-    width: 100%;
+    width: 18.61%;
 }
+
 .insta .inner .list .item a img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+
 /* vedio */
 .vedio {
     margin-bottom: 20rem;
 }
+
 .vedio .inner {
     width: 70%;
     margin: 0 auto;
-    /* padding: 0 6rem; */
 }
 
 .vedio .inner video {
@@ -639,34 +660,129 @@ font-size:10px로 초기값 설정. */
 
 
 /* footer */
-.footer {}
+.footer {
+    width: 100%;
+    background-color: var(--color-btn-bg);
+    padding: 5rem 0 6.1rem 0;
+}
+
 .footer .inner {}
-.footer .inner .text_wrap {}
-.footer .inner .text_wrap .logo {}
-.footer .inner .text_wrap .logo img {}
+
+.footer .inner .text_wrap {
+    display: flex;
+    gap: 12rem;
+}
+
+.footer .inner .text_wrap .logo {
+    width: 9rem;
+}
+
+.footer .inner .text_wrap .logo img {
+    width: 100%;
+}
 
 .footer .inner .text_wrap .info_wrap {}
-.footer .inner .text_wrap .info_wrap .wrap_01 {}
-.footer .inner .text_wrap .info_wrap .wrap_01 span {}
-.footer .inner .text_wrap .info_wrap .wrap_01 p {}
 
-.footer .inner .text_wrap .info_wrap .wrap_02 {}
-.footer .inner .text_wrap .info_wrap .wrap_02 .fax {}
-.footer .inner .text_wrap .info_wrap .wrap_02 .fax p {}
+.footer .inner .text_wrap .info_wrap .wrap_01 {
+    color: var(--color-text-white);
+    margin-bottom: 0.6rem;
+}
 
-.footer .inner .text_wrap .info_wrap .wrap_02 .kakao {}
-.footer .inner .text_wrap .info_wrap .wrap_02 .kakao p {}
+.footer .inner .text_wrap .info_wrap .wrap_01 span {
+    font-size: var(--fontSize-nav-depth-01);
+    font-weight: 300;
+    line-height: 140%;
+}
 
-.footer .inner .text_wrap .info_wrap .wrap_02 .e-mail {}
-.footer .inner .text_wrap .info_wrap .wrap_02 .e-mail p{}
+.footer .inner .text_wrap .info_wrap .wrap_01 p {
+    font-size: var(--fontSize-14);
+    font-weight: 300;
+    line-height: 140%;
+}
 
-.footer .inner .text_wrap .address_wrap {}
-.footer .inner .text_wrap .address_wrap p {}
-.footer .inner .text_wrap .address_wrap .num {}
+.footer .inner .text_wrap .info_wrap .wrap_02 {
+    color: var(--color-text-white);
+    font-size: var(--fontSize-14);
+    line-height: 140%;
+}
+
+.footer .inner .text_wrap .info_wrap .wrap_02 .fax {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.footer .inner .text_wrap .info_wrap .wrap_02 .fax span {
+    width: 4.5rem;
+    font-weight: 400;
+}
+
+.footer .inner .text_wrap .info_wrap .wrap_02 .fax p {
+    font-weight: 300;
+}
+
+.footer .inner .text_wrap .info_wrap .wrap_02 .kakao {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.footer .inner .text_wrap .info_wrap .wrap_02 .kakao span {
+    font-weight: 400;
+}
+
+.footer .inner .text_wrap .info_wrap .wrap_02 .kakao p {
+    font-weight: 300;
+}
+
+.footer .inner .text_wrap .info_wrap .wrap_02 .e-mail {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.footer .inner .text_wrap .info_wrap .wrap_02 .e-mail span {
+    font-weight: 400;
+}
+
+.footer .inner .text_wrap .info_wrap .wrap_02 .e-mail p {
+    font-weight: 300;
+}
+
+.footer .inner .text_wrap .address_wrap {
+    color: var(--color-text-white);
+    line-height: 140%;
+}
+
+.footer .inner .text_wrap .address_wrap {
+    font-size: var(--fontSize-14);
+    line-height: 140%;
+}
+
+
+.footer .inner .text_wrap .address_wrap p {
+    color: var(--color-text-white);
+    font-weight: 300;
+}
+
+.footer .inner .text_wrap .address_wrap .num {
+    display: flex;
+    gap: 2.5rem;
+    color: #58A6FF;
+    font-weight: 400;
+}
+
 .footer .inner .text_wrap .address_wrap .num span {}
 
-.footer .inner .rights {}
-.footer .inner .rights p {}
+.footer .inner .rights {
+    color: var(--color-text-white);
+    line-height: 140%;
+}
+
+.footer .inner .rights p {
+    color: var(--color-text-white);
+    font-size: var(--fontSize-14);
+    font-weight: 300;
+    line-height: 140%;
+
+}
 
 
 
