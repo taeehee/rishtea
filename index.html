@@ -73,6 +73,27 @@
             };//해상도 960px미만일 때 스와이퍼 슬라이드 구현(best,new section)
 
 
+            let category = document.querySelectorAll('.category li');
+            let Cont = document.querySelectorAll('.list');
+            for (let i = 0; i < category.length; i++) {
+                category[i].addEventListener('mouseover', () => {
+
+                    category.forEach(categoryIndex => {
+                        categoryIndex.classList.remove('active')
+                    });
+
+                    category[i].classList.add('active');
+
+
+                    Cont.forEach(ContIndex => {
+                        ContIndex.classList.remove('active');
+                    });
+
+                    Cont[i].classList.add('active');
+                });
+            };//카테고리명 클릭했을때 list변경 (.tea_type) 
+
+
 
 
         };//script end
@@ -312,7 +333,7 @@
                         </div><!-- swiper-slide -->
 
                         <div class="swiper-slide">
-                            <div class="image_sec"><img src="img/자스민그린02.jpg" alt="자스민 그린"></div>
+                            <div class="image_sec"><img src="img/자스민그린.png" alt="자스민 그린"></div>
                             <div class="text_sec">
                                 <div class="title_sec">
                                     <div class="title_wrap">
@@ -340,11 +361,467 @@
                     <div class="swiper-pagination"></div>
                 </div><!-- swiper mySwiper -->
 
-
+                <div class="shopall_btn">
+                    <button class="shopall">SHOP ALL</button>
+                </div><!-- shopall_btn -->
             </section><!-- best_seller -->
 
+            <section class="new_arrivals">
+                <h1>New Arrivals</h1>
+
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="image_sec"><img src="img/동방홍(프로모션).jpg" alt="동방홍(프로모션)"></div><!-- image_sec -->
+                            <div class="text_sec">
+                                <div class="title_sec">
+                                    <div class="title_wrap">
+                                        <a href="#">
+                                            <h2>동방홍(프로모션)</h2>
+                                        </a>
+                                        <a href="#">
+                                            <p>Dong Fang Hong(Eastern Beauty Red)</p>
+                                        </a>
+                                    </div><!-- title_wrap -->
+                                    <div class="cart">
+                                        <a href="#"><img src="img/icon/cart.png" alt="장바구니"></a>
+                                    </div><!-- cart -->
+                                </div><!-- title_sec -->
+
+                                <div class="des_sec">
+                                    <div class="des_wrap">
+                                        <p>동방홍(Eastern Beauty Red)은 우롱차와 홍차의 제다과정을 혼합한 새로운 스타일의 차입니다. 태국 도이메 살롱에 위치한
+                                            리쉬티의 파트너들은 강렬한 맛과 복합적인 향을 가진 소량의 특별한 연지 품종의 찻잎을 봄 수확기에 맞춰 재배하여 생산하였으며, 이 시기에
+                                            수확되는 여린 1창2기의 찻잎에는 봄에 수확되는 차의 강한 기운을 머금고 있습니다. 이 다원은 리쉬티가 늦은 봄과 장마철에 수확하여
+                                            고품질의 루비 우롱을 만드는 차를 재배하고 생산하는 다원이기도 합니다.
+                                        </p>
+                                        <span>35,000원</span>
+                                    </div><!-- des_wrap -->
+                                </div><!-- des_sec -->
+                            </div><!-- text_sec -->
+                        </div><!-- swiper-slide -->
 
 
+
+                        <div class="swiper-slide">
+                            <div class="image_sec"><img src="img/실리콘티백트레이.jpg" alt="실리콘 티백 트레이"></div>
+                            <div class="text_sec">
+                                <div class="title_sec">
+                                    <div class="title_wrap">
+                                        <a href="#">
+                                            <h2>실리콘 티백 트레이</h2>
+                                        </a>
+                                        <a href="#">
+                                            <p>Silicon Tea-Filter Tray</p>
+                                        </a>
+                                    </div><!-- title_wrap -->
+                                    <div class="cart">
+                                        <a href="#"><img src="img/icon/cart.png" alt="장바구니"></a>
+                                    </div><!-- cart -->
+                                </div><!-- title_sec -->
+                                <div class="des_sec">
+                                    <div class="des_wrap">
+                                        <p>다 우려진 티백을 올려두거나 컵받침 또는 머그잔 덮개로 다양하게 활용할 수 있는 실리콘 트레이</p>
+                                        <span>8,000원</span>
+                                    </div><!-- des_wrap -->
+                                </div><!-- des_sec -->
+                            </div><!-- text_sec -->
+                        </div><!-- swiper-slide -->
+
+                        <div class="swiper-slide">
+                            <div class="image_sec"><img src="img/쇼핑백.jpg" alt="쇼핑백"></div>
+                            <div class="text_sec">
+                                <div class="title_sec">
+                                    <div class="title_wrap">
+                                        <a href="#">
+                                            <h2>쇼핑백</h2>
+                                        </a>
+                                        <a href="#">
+                                            <p>3가지 사이즈</p>
+                                        </a>
+                                    </div><!-- title_wrap -->
+                                    <div class="cart">
+                                        <a href="#"><img src="img/icon/cart.png" alt="장바구니"></a>
+                                    </div><!-- cart -->
+                                </div><!-- title_sec -->
+                                <div class="des_sec">
+                                    <div class="des_wrap">
+                                        <p>쇼핑백은 총 3가지 사이즈와 깔끔한 디자인으로 준비되어있습니다. RISHI 제품을 담아 사용할 수 있으며 선물할 때, 사용하기에도 좋은
+                                            쇼핑백입니다.
+                                        </p>
+                                        <span>1,500원</span>
+                                    </div><!-- des_wrap -->
+                                </div><!-- des_sec -->
+                            </div><!-- text_sec -->
+                        </div><!-- swiper-slide -->
+
+                        <div class="swiper-slide">
+                            <div class="image_sec"><img src="img/RISHI꾸러미백.jpg" alt="RISHI 꾸러미백"></div>
+                            <div class="text_sec">
+                                <div class="title_sec">
+                                    <div class="title_wrap">
+                                        <a href="#">
+                                            <h2>RISHI 꾸러미백</h2>
+                                        </a>
+                                        <a href="#">
+                                            <p>선물 포장용</p>
+                                        </a>
+                                    </div><!-- title_wrap -->
+                                    <div class="cart">
+                                        <a href="#"><img src="img/icon/cart.png" alt="장바구니"></a>
+                                    </div><!-- cart -->
+                                </div><!-- title_sec -->
+                                <div class="des_sec">
+                                    <div class="des_wrap">
+                                        <p>여러 가지 종류의 TEA와 색다른 형태의 선물을 주고싶을 때 좋은 꾸러미백. 리본 끈이 부착되어 쇼핑백이 필요 없으며, 재활용이
+                                            가능합니다.</p>
+                                        <span>2,200원</span>
+                                    </div><!-- des_wrap -->
+                                </div><!-- des_sec -->
+                            </div><!-- text_sec -->
+                        </div><!-- swiper-slide -->
+
+                        <div class="swiper-slide">
+                            <div class="image_sec"><img src="img/리쉬티필터(라지).jpg" alt="리쉬 티필터(라지)"></div>
+                            <div class="text_sec">
+                                <div class="title_sec">
+                                    <div class="title_wrap">
+                                        <a href="#">
+                                            <h2>리쉬 티필터(라지)</h2>
+                                        </a>
+                                        <a href="#">
+                                            <p>Loose Leaf Tea Bags</p>
+                                        </a>
+                                    </div><!-- title_wrap -->
+                                    <div class="cart">
+                                        <a href="#"><img src="img/icon/cart.png" alt="장바구니"></a>
+                                    </div><!-- cart -->
+                                </div><!-- title_sec -->
+                                <div class="des_sec">
+                                    <div class="des_wrap">
+                                        <p>천연 종이필터로 프리미엄 잎차나 허브차를 만들기에 최적의 티필터입니다. 머그잔이나 Take-out 종이컵에 티백처럼 사용할 수 있습니다.
+                                        </p>
+                                        <span>11,000원</span>
+                                    </div><!-- des_wrap -->
+                                </div><!-- des_sec -->
+                            </div><!-- text_sec -->
+                        </div><!-- swiper-slide -->
+
+                        <div class="swiper-slide">
+                            <div class="image_sec"><img src="img/자스민그린.png" alt="자스민 그린"></div>
+                            <div class="text_sec">
+                                <div class="title_sec">
+                                    <div class="title_wrap">
+                                        <a href="#">
+                                            <h2>자스민 그린</h2>
+                                        </a>
+                                        <a href="#">
+                                            <p>Jasmine Green</p>
+                                        </a>
+                                    </div><!-- title_wrap -->
+                                    <div class="cart">
+                                        <a href="#"><img src="img/icon/cart.png" alt="장바구니"></a>
+                                    </div><!-- cart -->
+                                </div><!-- title_sec -->
+                                <div class="des_sec">
+                                    <div class="des_wrap">
+                                        <p>중국 장인에 의해 재배된 고산차의 풍미와 자스민향이 더해져 더욱 깔끔하고 담백한 향의 녹차입니다.</p>
+                                        <span>62,000원</span>
+                                    </div><!-- des_wrap -->
+                                </div><!-- des_sec -->
+                            </div><!-- text_sec -->
+                        </div><!-- swiper-slide -->
+
+                    </div><!-- swiper-wrapper -->
+                    <div class="swiper-pagination"></div>
+                </div><!-- swiper mySwiper -->
+
+                <div class="shopall_btn">
+                    <button class="shopall">SHOP ALL</button>
+                </div><!-- shopall_btn -->
+            </section><!-- new_arrivals -->
+
+            <section class="tea_type">
+                <div class="inner">
+                    <ul class="category">
+                        <li><a href="#">Black</a></li>
+                        <li><a href="#">White</a></li>
+                        <li><a href="#">Green</a></li>
+                        <li><a href="#">Oolong</a></li>
+                        <li><a href="#">Pu'er</a></li>
+                        <li><a href="#">Botanicals</a></li>
+                        <li><a href="#">Chai</a></li>
+                        <li><a href="#">Matcha</a></li>
+                    </ul><!-- category -->
+
+                    <div class="list active">
+                        <div class="text_section">
+                            <div class="text_wrap">
+                                <div class="title_wrap">
+                                    <p>홍차는블랙티</p>
+                                    <h1>Black</h1>
+                                </div><!-- title_wrap -->
+                                <div class="des_wrap">
+                                    <div class="kor">
+                                        <p>홍차는 인도, 스리랑카, 중국, 동남아시아, 아프리카 등 주요 산지들의 다양한 지형과 기후로 인해 각각 다른 풍미와 매력을 지니게 됩니다.
+                                            <br>
+                                            <br>
+                                        </p>
+                                    </div><!-- kor -->
+                                    <div class="eng">
+                                        <p>"Black Tea," as it's called in the West, is known as Hong Cha or "Red Tea" in
+                                            Asia due to the reddish pigments that are produced when the tea leaves are
+                                            rolled and oxidized.</p>
+                                    </div><!-- eng -->
+                                </div><!-- des_wrap -->
+                            </div><!-- text_wrap -->
+                            <div class="viwmore_btn">
+                                <button class="viwmore">VIEW MORE</button>
+                            </div><!-- viwmore_btn -->
+                        </div><!-- text_section -->
+                        <div class="image_section">
+                            <img src="img/리쉬티필터(라지).jpg" alt="">
+                        </div><!-- image_section -->
+                    </div><!-- list_01 -->
+
+                    <div class="list ">
+                        <div class="text_section">
+                            <div class="text_wrap">
+                                <div class="title_wrap">
+                                    <p>백차는 화이트티</p>
+                                    <h1>White</h1>
+                                </div><!-- title_wrap -->
+                                <div class="des_wrap">
+                                    <div class="kor">
+                                        <p>우아하고 고결한 이미지의 백차는 섬세한 풍미와 부드러운 목넘김, 은은한 과일 향과 달콤한 여운이 특징입니다.
+                                            <br>
+                                            <br>
+                                        </p>
+                                    </div><!-- kor -->
+                                    <div class="eng">
+                                        <p>Picked in small batches exclusively in the early spring, White Teas are
+                                            coated in silvery-white trichomes. Known as the Scholar's Tea, white teas
+                                            inspire with fresh energy and sweetness of spring.</p>
+                                    </div><!-- eng -->
+                                </div><!-- des_wrap -->
+                            </div><!-- text_wrap -->
+                            <div class="viwmore_btn">
+                                <button class="viwmore">VIEW MORE</button>
+                            </div><!-- viwmore_btn -->
+                        </div><!-- text_section -->
+                        <div class="image_section">
+                            <img src="img/마살라차이.jpg" alt="">
+                        </div><!-- image_section -->
+                    </div><!-- list_02 -->
+
+                    <div class="list ">
+                        <div class="text_section">
+                            <div class="text_wrap">
+                                <div class="title_wrap">
+                                    <p>녹차는 그린티</p>
+                                    <h1>Green</h1>
+                                </div><!-- title_wrap -->
+                                <div class="des_wrap">
+                                    <div class="kor">
+                                        <p>녹차는 신선하고 싱그러운 매력과 과학적으로 입증된 건강상의 효능으로 유명합니다.
+                                            <br>
+                                            <br>
+                                        </p>
+                                    </div><!-- kor -->
+                                    <div class="eng">
+                                        <p>The least oxidized of all tea types, Green Tea is crafted with the
+                                            application of heat in a step called Sha Qing or "firing" which halts the
+                                            enzyme that causes oxidation and locks in the green leaf color.</p>
+                                    </div><!-- eng -->
+                                </div><!-- des_wrap -->
+                            </div><!-- text_wrap -->
+                            <div class="viwmore_btn">
+                                <button class="viwmore">VIEW MORE</button>
+                            </div><!-- viwmore_btn -->
+                        </div><!-- text_section -->
+                        <div class="image_section">
+                            <img src="img/리쉬티필터(라지).jpg" alt="">
+                        </div><!-- image_section -->
+                    </div><!-- list_03 -->
+
+                    <div class="list ">
+                        <div class="text_section">
+                            <div class="text_wrap">
+                                <div class="title_wrap">
+                                    <p>우롱티</p>
+                                    <h1>Oolong</h1>
+                                </div><!-- title_wrap -->
+                                <div class="des_wrap">
+                                    <div class="kor">
+                                        <p>차 애호가들 사이에서 매우 잘 알려진 우롱차는 놀라울정도로 복합적인 풍미로 유명하며 세계에서 가장 예술적인 차 중 일부입니다.
+                                            <br>
+                                            <br>
+                                        </p>
+                                    </div><!-- kor -->
+                                    <div class="eng">
+                                        <p>Oolong Teas are “semi-oxidized" through artisanal crafting techniques, and
+                                            are highly sought-after by tea connoisseurs for their wonderfully complex
+                                            aromatic profiles.</p>
+                                    </div><!-- eng -->
+                                </div><!-- des_wrap -->
+                            </div><!-- text_wrap -->
+                            <div class="viwmore_btn">
+                                <button class="viwmore">VIEW MORE</button>
+                            </div><!-- viwmore_btn -->
+                        </div><!-- text_section -->
+                        <div class="image_section">
+                            <img src="img/리쉬티필터(라지).jpg" alt="">
+                        </div><!-- image_section -->
+                    </div><!-- list_04 -->
+
+                    <div class="list ">
+                        <div class="text_section">
+                            <div class="text_wrap">
+                                <div class="title_wrap">
+                                    <p>보이차</p>
+                                    <h1>Pu'er</h1>
+                                </div><!-- title_wrap -->
+                                <div class="des_wrap">
+                                    <div class="kor">
+                                        <p>보이차는 중국 남서부의 윈난(雲南:운남) 지방에서 기원한 고대의 차로, 2,000년 이상의 역사를 가지고 있습니다.
+                                            <br>
+                                            <br>
+                                        </p>
+                                    </div><!-- kor -->
+                                    <div class="eng">
+                                        <p>Dark Teas undergo special kinds of fermentation resulting in beneficial
+                                            transformations of tea leaf polyphenols and robust, pungent flavors. The
+                                            most popular style, Pu'er Tea, is produced with sun-dried green tea grown
+                                            from ancient heirloom broad leaf tea trees.</p>
+                                    </div><!-- eng -->
+                                </div><!-- des_wrap -->
+                            </div><!-- text_wrap -->
+                            <div class="viwmore_btn">
+                                <button class="viwmore">VIEW MORE</button>
+                            </div><!-- viwmore_btn -->
+                        </div><!-- text_section -->
+                        <div class="image_section">
+                            <img src="img/리쉬티필터(라지).jpg" alt="">
+                        </div><!-- image_section -->
+                    </div><!-- list_05 -->
+
+                    <div class="list ">
+                        <div class="text_section">
+                            <div class="text_wrap">
+                                <div class="title_wrap">
+                                    <p>보타니컬티</p>
+                                    <h1>Botanicals</h1>
+                                </div><!-- title_wrap -->
+                                <div class="des_wrap">
+                                    <div class="kor">
+                                        <p>각 계절과 다양한 취향에 어울리는 맛과 매력을 지닌 보타니컬 블렌드는 다양한 허브, 식물, 과일, 꽃 또는 향신료를 사용하여 우려진 음료를
+                                            의미합니다.
+                                            <br>
+                                            <br>
+                                        </p>
+                                    </div><!-- kor -->
+                                    <div class="eng">
+                                        <p>Premium botanicals including roots, fruits, flowers, seeds, barks, stems
+                                            and leaves sourced from organic farms around the world. Rishi's Botanical
+                                            blends are inspired by our travels and passion for herbalism and
+                                            the culinary arts.</p>
+                                    </div><!-- eng -->
+                                </div><!-- des_wrap -->
+                            </div><!-- text_wrap -->
+                            <div class="viwmore_btn">
+                                <button class="viwmore">VIEW MORE</button>
+                            </div><!-- viwmore_btn -->
+                        </div><!-- text_section -->
+                        <div class="image_section">
+                            <img src="img/리쉬티필터(라지).jpg" alt="">
+                        </div><!-- image_section -->
+                    </div><!-- list_06 -->
+
+                    <div class="list ">
+                        <div class="text_section">
+                            <div class="text_wrap">
+                                <div class="title_wrap">
+                                    <p>차이티</p>
+                                    <h1>Chai</h1>
+                                </div><!-- title_wrap -->
+                                <div class="des_wrap">
+                                    <div class="kor">허브 하나하나를 잘게 썰고, 으깨고, 갈거나 두드리는 제조 과정을 통해 허브 본질적인 특성을 살린 리쉬티의 다양한 차이
+                                        블렌드 입니다.홍차는 인도, 스리랑카, 중국, 동남아시아, 아프리카 등 주요 산지들의 다양한 지형과 기후로 인해 각각 다른 풍미와 매력을 지니게
+                                        됩니다.
+                                        <br>
+                                        <br>
+                                        </p>
+                                    </div><!-- kor -->
+                                    <div class="eng">
+                                        <p>Masala Chai, or "mixed-spices tea" originated in India and is traditionally
+                                            prepared by simmering tea and spices in water, milk to create
+                                            a rich, comforting cup sweetened to taste.</p>
+                                    </div><!-- eng -->
+                                </div><!-- des_wrap -->
+                            </div><!-- text_wrap -->
+                            <div class="viwmore_btn">
+                                <button class="viwmore">VIEW MORE</button>
+                            </div><!-- viwmore_btn -->
+                        </div><!-- text_section -->
+                        <div class="image_section">
+                            <img src="img/리쉬티필터(라지).jpg" alt="">
+                        </div><!-- image_section -->
+                    </div><!-- list_07 -->
+
+                    <div class="list ">
+                        <div class="text_section">
+                            <div class="text_wrap">
+                                <div class="title_wrap">
+                                    <p>맛차</p>
+                                    <h1>Matcha</h1>
+                                </div><!-- title_wrap -->
+                                <div class="des_wrap">
+                                    <div class="kor">
+                                        <p>세한 맛과 향을 갖춘 맛차는 세계적으로 인기 있는 음료가 되었으며, 북미 대다수의 카페에서도 필수품이 되었습니다. 전통적인 수제 맛차 부터
+                                            맛차 라떼까지 다양하게 즐겨보세요.
+                                            <br>
+                                            <br>
+                                        </p>
+                                    </div><!-- kor -->
+                                    <div class="eng">
+                                        <p>Matcha is the shade grown, stone ground green tea powder of Japan. Matcha is
+                                            special in that the entire tea leaf is consumed, giving clean
+                                            energy balanced with a sense of focus attributed to the amino acid
+                                            L-theanine.</p>
+                                    </div><!-- eng -->
+                                </div><!-- des_wrap -->
+                            </div><!-- text_wrap -->
+                            <div class="viwmore_btn">
+                                <button class="viwmore">VIEW MORE</button>
+                            </div><!-- viwmore_btn -->
+                        </div><!-- text_section -->
+                        <div class="image_section">
+                            <img src="img/리쉬티필터(라지).jpg" alt="">
+                        </div><!-- image_section -->
+                    </div><!-- list_08 -->
+
+
+
+                </div><!-- inner -->
+
+
+            </section><!-- tea_type -->
+
+            <section class="insta">
+                <div class="inner">
+                    <div class="title"><a href="https://www.instagram.com/rishiteakorea/">@rishiteakorea</a></div>
+                    <div class="list">
+                        <div class="item">
+                            <a href="#"><img src="img/블루베리루이보스.jpg" alt="인스타이미지"></a>
+                            <a href="#"><img src="img/블루베리루이보스.jpg" alt="인스타이미지"></a>
+                            <a href="#"><img src="img/블루베리루이보스.jpg" alt="인스타이미지"></a>
+                            <a href="#"><img src="img/블루베리루이보스.jpg" alt="인스타이미지"></a>
+                            <a href="#"><img src="img/블루베리루이보스.jpg" alt="인스타이미지"></a>
+                        </div><!-- item -->
+                    </div><!-- list -->
+                </div><!-- inner -->
+            </section><!-- insta -->
 
 
         </main><!-- main -->
