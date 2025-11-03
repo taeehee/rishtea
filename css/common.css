@@ -46,7 +46,8 @@
 .header .inner,
 .best_seller,
 .new_arrivals,
-.tea_type {
+.tea_type,
+.vedio {
     max-width: 1440px;
     width: calc(100% - 32px);
     margin: 0 auto;
