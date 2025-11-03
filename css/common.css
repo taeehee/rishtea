@@ -63,4 +63,9 @@ h1 {
     font-weight: 300;
     line-height: 140%;
     color: var(--color-text-grey);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    /* 2줄넘어가면 말줄임 */
 }

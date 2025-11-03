@@ -282,24 +282,31 @@ font-size:10px로 초기값 설정. */
 
 .best_seller .swiper-wrapper .swiper-slide {
     width: 32.22%;
+    display: flex;
+    flex-direction: column;
+    /* 세로 배치 */
+    height: auto;
+    /* 내용물에 따라 높이 자동 조절 */
 }
 
 .best_seller .swiper-wrapper .swiper-slide .image_sec {
     width: 100%;
-    /* height: 46.4rem; */
 }
 
 .best_seller .swiper-wrapper .swiper-slide .image_sec:hover {
-    content:'url(img/카모마일메들리02.jpg)';
+    content: 'url(img/카모마일메들리02.jpg)';
 }
 
 .best_seller .swiper-wrapper .swiper-slide .image_sec img {
     width: 100%;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
 }
 
 .best_seller .swiper-wrapper .swiper-slide .text_sec {
     width: 100%;
+    flex-grow: 1;
+    /* 컨테이너 크기가 늘어나면 해당 class는 남은 공간을 전부 채우기 위해 유연하게 늘어남. */
 }
 
 .best_seller .swiper-wrapper .swiper-slide .text_sec .title_sec {
@@ -335,6 +342,7 @@ font-size:10px로 초기값 설정. */
 .best_seller .swiper-wrapper .swiper-slide .text_sec .des_sec {
     width: 100%;
     padding: 1rem;
+
     /* display: none; */
 }
 
