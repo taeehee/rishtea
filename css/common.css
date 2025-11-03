@@ -6,6 +6,7 @@
     --fontSize-util: 1.5rem; /* 15px */
     --fontSize-nav-depth-01: 2.2rem;
     --fontSize-nav-depth-02: 2rem;
+    --fontSize-sec-title: 4.2rem;
 
     /* --fontSize-md: 18px;
     --fontSize-sm: 15px;
@@ -14,16 +15,20 @@
 
     --color-nav-bg: #005B3C; /* 아코디언nav BG */
     --color-nav-text: #E9E3D2; /* 아코디언nav text */
+    --color-text-white: #ffffff; /* 폰트컬러 white */
+    --color-text-bl: #000000; /* 폰트컬러 black */
+    --color-text-grey: #8C8A8A; /* item 영문명 */
 
 
-    --margin-b-lg: 40px; /* margin-bottom-큰 영역 */
-    --margin-b-md: 40px; /* margin-bottom-중간 영역 */
+    --margin-b-lg: 20rem; /* margin-bottom-큰 영역 */
+    --margin-b-md: 5rem; /* margin-bottom-중간 영역 */
 }
 
 
 
 /* 공통스타일 정리 */
-.header .inner {
+.header .inner,
+.best_seller {
     max-width: 1440px;
     width: calc(100% - 32px);
     margin: 0 auto;
@@ -38,6 +43,24 @@
     color: var(--color-nav-text);
 }
 
-.header .inner nav .gnb>li .depth-01{ 
+/* section best, new */
+h1 {
+    font-family: 'Times New Roman';
+    font-size: 4.2rem;
+    font-weight: 400;
+    font-weight: 140%;
+    margin-bottom: var(--margin-b-md);
+}
 
+.best_seller h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    line-height: 140%;
+}
+
+.best_seller p{
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 140%;
+    color: var(--color-text-grey);
 }

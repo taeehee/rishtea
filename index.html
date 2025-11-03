@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rishtea</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/main.css">
 
     <script src="lib/jquery-3.7.1.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         window.onload = () => {
             let header = document.getElementsByClassName('header')[0];
@@ -48,16 +52,25 @@
 
 
             $('.nav .depth-01').on('click', function () {
-                //alert(); 테스트 후 주석처리
-                $('.nav .depth-02').slideUp(); //*순서 중요
-                $(this).siblings('.depth-02').slideDown(); //siblings:모든 형제 선택자들 찾기. 가장 많이 쓰임
+                $('.nav .depth-02').slideUp();
+                $(this).siblings('.depth-02').slideDown();
 
-                //모든 .depth-01에게 클래스명 active삭제 removeClass('active')
-                //내가 클릭한 요소에게 클래스명 active추가 addClass('active')
                 $('.nav .depth-01').removeClass('active');
                 $(this).addClass('active');
-            });
+            });// nav 아코디언 메뉴
 
+
+
+            if ($(window).width() < 960) { /* $(window).width():화면크기 /960px(X) 숫자만 입력 */
+                var swiper = new Swiper(".mySwiper", {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                });
+            };//해상도 960px미만일 때 스와이퍼 슬라이드 구현(best,new section)
 
 
 
@@ -108,7 +121,7 @@
                         <li>
                             <a href="#" class="depth-01">COMMUNITY</a>
                             <ul class="depth-02">
-        
+
                                 <li><a href="#">Notice</a></li>
                                 <li><a href="#">FAQ</a></li>
                                 <li><a href="#">Event / Blog</a></li>
@@ -144,8 +157,9 @@
 
                 <div class="text_wrap">
                     <div class="title_wrap">
-                        <h1></h1>
-                        <p></p>
+                        <span>Fall into ritual</span>
+                        <p>Find a new rhythm in your routine with <br>
+                            teas that taste how autumn feels.</p>
                     </div><!-- title_wrap -->
 
                     <div class="btn_wrap">
@@ -159,9 +173,182 @@
 
                     </div><!-- btn_wrap -->
                 </div><!-- text_wrap -->
-
             </section><!-- main_visual -->
+
+            <section class="best_seller">
+                <h1>Best Sellers</h1>
+
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="image_sec"><img src="img/카모마일메들리.jpg" alt="카모마일 메들리"></div><!-- image_sec -->
+                            <div class="text_sec">
+                                <div class="title_sec">
+                                    <div class="title_wrap">
+                                        <a href="#">
+                                            <h2>카모마일 메들리</h2>
+                                        </a>
+                                        <a href="#">
+                                            <p>Organic Chamomile Medley</p>
+                                        </a>
+                                    </div><!-- title_wrap -->
+                                    <div class="cart">
+                                        <a href="#"><img src="img/icon/cart.png" alt="장바구니"></a>
+                                    </div><!-- cart -->
+                                </div><!-- title_sec -->
+
+                                <div class="des_sec">
+                                    <div class="des_wrap">
+                                        <p>레몬 버베나, 레몬그라스, 스피어민트와 황금빛 크로아티아 캐모마일 꽃이 부드럽고 완벽한 조화를 이루는 리쉬의 시그니처 허브 블렌드입니다.
+                                        </p>
+                                        <span>22,000원</span>
+                                    </div><!-- des_wrap -->
+                                </div><!-- des_sec -->
+                            </div><!-- text_sec -->
+                        </div><!-- swiper-slide -->
+
+
+
+                        <div class="swiper-slide">
+                            <div class="image_sec"><img src="img/페퍼민트.jpg" alt="페퍼민트"></div>
+                            <div class="text_sec">
+                                <div class="title_sec">
+                                    <div class="title_wrap">
+                                        <a href="#">
+                                            <h2>페퍼민트</h2>
+                                        </a>
+                                        <a href="#">
+                                            <p>Organic Peppermint</p>
+                                        </a>
+                                    </div><!-- title_wrap -->
+                                    <div class="cart">
+                                        <a href="#"><img src="img/icon/cart.png" alt="장바구니"></a>
+                                    </div><!-- cart -->
+                                </div><!-- title_sec -->
+                                <div class="des_sec">
+                                    <div class="des_wrap">
+                                        <p>리쉬의 순수한 페퍼민트 잎은 세계에서 가장 향기롭고 강력한 것으로 평가되는 특정 품목으로 엄선된 페퍼민트 허브차입니다.</p>
+                                        <span>22,000원</span>
+                                    </div><!-- des_wrap -->
+                                </div><!-- des_sec -->
+                            </div><!-- text_sec -->
+                        </div><!-- swiper-slide -->
+
+                        <div class="swiper-slide">
+                            <div class="image_sec"><img src="img/블루베리루이보스.jpg" alt="블루베리 루이보스"></div>
+                            <div class="text_sec">
+                                <div class="title_sec">
+                                    <div class="title_wrap">
+                                        <a href="#">
+                                            <h2>블루베리 루이보스</h2>
+                                        </a>
+                                        <a href="#">
+                                            <p>Organic Blueberry Rooibos</p>
+                                        </a>
+                                    </div><!-- title_wrap -->
+                                    <div class="cart">
+                                        <a href="#"><img src="img/icon/cart.png" alt="장바구니"></a>
+                                    </div><!-- cart -->
+                                </div><!-- title_sec -->
+                                <div class="des_sec">
+                                    <div class="des_wrap">
+                                        <p>엘더베리, 블루베리, 히비스커스의 과일 향과 함께 루이보스의 강력한 풍미가 강조된 새콤하면서도 달콤한 리쉬의 오리지널 허브 블렌드입니다.
+                                        </p>
+                                        <span>30,000원</span>
+                                    </div><!-- des_wrap -->
+                                </div><!-- des_sec -->
+                            </div><!-- text_sec -->
+                        </div><!-- swiper-slide -->
+
+                        <div class="swiper-slide">
+                            <div class="image_sec"><img src="img/투메릭진저.jpg" alt="투메릭 진저"></div>
+                            <div class="text_sec">
+                                <div class="title_sec">
+                                    <div class="title_wrap">
+                                        <a href="#">
+                                            <h2>투메릭 진저</h2>
+                                        </a>
+                                        <a href="#">
+                                            <p>Organic Turmeric Ginger</p>
+                                        </a>
+                                    </div><!-- title_wrap -->
+                                    <div class="cart">
+                                        <a href="#"><img src="img/icon/cart.png" alt="장바구니"></a>
+                                    </div><!-- cart -->
+                                </div><!-- title_sec -->
+                                <div class="des_sec">
+                                    <div class="des_wrap">
+                                        <p>생강, 강황을 중심으로 감초, 시트러스 허브가 블렌딩 된 고대 아유르베다에서 영감을 받은 허브 블렌드입니다.</p>
+                                        <span>30,000원</span>
+                                    </div><!-- des_wrap -->
+                                </div><!-- des_sec -->
+                            </div><!-- text_sec -->
+                        </div><!-- swiper-slide -->
+
+                        <div class="swiper-slide">
+                            <div class="image_sec"><img src="img/마살라차이.jpg" alt="마살라 차이"></div>
+                            <div class="text_sec">
+                                <div class="title_sec">
+                                    <div class="title_wrap">
+                                        <a href="#">
+                                            <h2>마살라 차이</h2>
+                                        </a>
+                                        <a href="#">
+                                            <p>Organic Black Tea Blend</p>
+                                        </a>
+                                    </div><!-- title_wrap -->
+                                    <div class="cart">
+                                        <a href="#"><img src="img/icon/cart.png" alt="장바구니"></a>
+                                    </div><!-- cart -->
+                                </div><!-- title_sec -->
+                                <div class="des_sec">
+                                    <div class="des_wrap">
+                                        <p>태국 북부의 홍차와 아쌈, 남아시아 및 동남아시아 고유의 전통 향신료와 혼합된 클래식한 스타일의 홍차 블렌드입니다.</p>
+                                        <span>15,000원</span>
+                                    </div><!-- des_wrap -->
+                                </div><!-- des_sec -->
+                            </div><!-- text_sec -->
+                        </div><!-- swiper-slide -->
+
+                        <div class="swiper-slide">
+                            <div class="image_sec"><img src="img/자스민그린02.jpg" alt="자스민 그린"></div>
+                            <div class="text_sec">
+                                <div class="title_sec">
+                                    <div class="title_wrap">
+                                        <a href="#">
+                                            <h2>자스민 그린</h2>
+                                        </a>
+                                        <a href="#">
+                                            <p>Jasmine Green</p>
+                                        </a>
+                                    </div><!-- title_wrap -->
+                                    <div class="cart">
+                                        <a href="#"><img src="img/icon/cart.png" alt="장바구니"></a>
+                                    </div><!-- cart -->
+                                </div><!-- title_sec -->
+                                <div class="des_sec">
+                                    <div class="des_wrap">
+                                        <p>중국 장인에 의해 재배된 고산차의 풍미와 자스민향이 더해져 더욱 깔끔하고 담백한 향의 녹차입니다.</p>
+                                        <span>62,000원</span>
+                                    </div><!-- des_wrap -->
+                                </div><!-- des_sec -->
+                            </div><!-- text_sec -->
+                        </div><!-- swiper-slide -->
+
+                    </div><!-- swiper-wrapper -->
+                    <div class="swiper-pagination"></div>
+                </div><!-- swiper mySwiper -->
+
+
+            </section><!-- best_seller -->
+
+
+
+
+
         </main><!-- main -->
+
 
         <footer class="footer">
         </footer><!-- footer -->
