@@ -155,9 +155,16 @@ font-size:10px로 초기값 설정. */
 
 /* main_visual */
 .main_visual {
+    width: 100%;
     height: 150vh;
     margin-bottom: var(--margin-b-lg);
 }
+.main_visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 .header .inner .util_wrap {
     height: 100%;
@@ -671,7 +678,7 @@ font-size:10px로 초기값 설정. */
     /* insta */
     .insta {
         width: 100%;
-        height: 55.4rem;
+        /* height: 55.4rem; */
         background-color: var(--color-nav-bg);
         margin-bottom: 20rem;
     }
