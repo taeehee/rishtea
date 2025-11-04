@@ -919,7 +919,7 @@ font-size:10px로 초기값 설정. */
 .tea_type .inner .list .text_section {
     width: 100%;
 }
-}
+}/* 해상도 480px이하일 때 */
 
 
 
