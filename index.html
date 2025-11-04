@@ -10,14 +10,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/main.css">
 
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- aos -->
-            <script>
-            AOS.init();
-        </script>
-    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script src="lib/jquery-3.7.1.min.js"></script><!-- 제이쿼리 -->
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- aos -->
     <script>
         
         window.onload = () => {
@@ -99,6 +95,8 @@
                     Cont[i].classList.add('active');
                 });
             };//카테고리명 클릭했을때 list변경 (.tea_type) 
+
+            AOS.init();//aos script
 
 
         };//script end
@@ -186,25 +184,13 @@
                             teas that taste how autumn feels.</p>
                     </div><!-- title_wrap -->
 
-                    <div class="btn_wrap">
-                        <div class="btn_text">
-                            <a href="#">SHOP NOW</a>
-                        </div><!-- btn_text -->
-
-                        <div class="btn_icon">
-                            <a href="#"><img src="img/icon/arrow_btn 1.png" alt="shop now화살표"></a>
-                        </div><!-- btn_icon -->
-                    </div><!-- btn_wrap -->
-
-                    <!-- SHOP NOW 실험 -->
                     <span class="shopnow_btn">
                         <a href="#">SHOP NOW</a>
                     </span><!-- shopnow_btn -->
-
                 </div><!-- text_wrap -->
             </section><!-- main_visual -->
 
-            <section class="best_seller">
+            <section data-aos="fade-right" class="best_seller">
                 <h1>Best Sellers</h1>
 
                 <div class="swiper mySwiper">
@@ -391,7 +377,7 @@
                 </div><!-- shopall_btn -->
             </section><!-- best_seller -->
 
-            <section class="new_arrivals">
+            <section data-aos="fade-right" class="new_arrivals">
                 <h1>New Arrivals</h1>
 
                 <div class="swiper mySwiper">
