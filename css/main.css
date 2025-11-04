@@ -837,10 +837,7 @@ font-size:10px로 초기값 설정. */
     font-size: var(--fontSize-14);
     font-weight: 300;
     line-height: 140%;
-
 }
-
-
 
 
 
@@ -849,12 +846,74 @@ font-size:10px로 초기값 설정. */
 /* 미디어쿼리 */
 @media screen and (max-width: 959px) {
 
+    html,
+    body {
+        font-size: 50%;
+        /* 8px */
+    }
+
+    /* 기준 10px -> 8px 자동 계산됨.*/
+
     .best_seller .swiper-wrapper,
     .new_arrivals .swiper-wrapper {
         flex-wrap: nowrap;
         gap: 3rem;
     }
+
+    /* .list가 스와이퍼 슬라이드로 변함 */
+
 }
 
 /* 해상도 959px이하일 때 */
-/* .list가 스와이퍼 슬라이드로 변함 */
+
+
+
+@media screen and (max-width: 480px) {
+
+    html,
+    body {
+        font-size: 37.5%;
+        /* 기준: 6px */
+    }
+
+    /* 섹션마다 간격 재설정 */
+    .main_visual,
+    .best_seller,
+    .new_arrivals,
+    .tea_type,
+    .insta,
+    .vedio {
+        margin-bottom: 8rem;
+    }
+
+    .tea_type .inner .list {
+        flex-wrap: wrap;
+    }
+
+    .tea_type .inner .list .image_section {
+        width: 100%;
+        order: 1;
+    }
+
+    .tea_type .inner .list .image_section img{
+        width: 100%;
+        aspect-ratio: 1 / 1;
+    }
+
+    .tea_type .inner .list .text_section{
+        width: 100%;
+    }
+
+
+
+
+    /* 14px이하는 14px로 설정함 */
+    .title p {
+        /* font-size: 14px;  (12px이지만 본문에서 12px사용은 좋지않으므로 14px로 고정) */
+        /* font-size: 2.33rem; */
+        /* 14 / 6 -> 2.33 */
+    }
+
+}
+
+/* 해상도 480px이하일 때 */
