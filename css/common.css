@@ -61,8 +61,6 @@ button {
     border: 0.1rem solid rgb(0, 0, 0, 0.2);
     background-color: rgb(255, 255, 255, 0.3);
     /* 배경흐림 */
-    
-
 }
 
 /* 아코디언 nav */
@@ -74,9 +72,9 @@ button {
     color: var(--color-nav-text);
 }
 
+
 /* .best_seller,
 .new_arrivals */
-
 h1 {
     font-family: 'Times New Roman';
     font-size: 4.2rem;
@@ -90,6 +88,7 @@ h1 {
     font-size: 2.2rem;
     font-weight: 300;
     line-height: 140%;
+    white-space: nowrap;
 }
 
 .best_seller p,
@@ -103,4 +102,21 @@ h1 {
     -webkit-line-clamp: 2;
     overflow: hidden;
     /* 2줄넘어가면 말줄임 */
+    white-space: nowrap;
+}
+
+.best_seller .swiper-wrapper .swiper-slide .text_sec .title_sec ,
+.new_arrivals .swiper-wrapper .swiper-slide .text_sec .title_sec {
+    position: relative;
+}
+
+.best_seller .swiper-wrapper .swiper-slide .text_sec .title_sec::before,
+.new_arrivals .swiper-wrapper .swiper-slide .text_sec .title_sec::before {
+    content: '';
+    width: 3.2rem;
+    height: 3.2rem;
+    background: url(../img/icon/cart.png) right / 100% no-repeat;
+    position: absolute;
+    top: 1.1rem;
+    right: 0.8rem;
 }

@@ -5,7 +5,8 @@
 @import url(/font/webfont_trans/stylesheet.css);
 
 html {
-    font-size: 10px;
+    font-size: 62.5%;
+    /* rem 기준 10px설정*/
     font-family: 'Noto Sans KR';
 }
 
@@ -378,20 +379,6 @@ font-size:10px로 초기값 설정. */
     padding: 1rem;
 }
 
-.best_seller .swiper-wrapper .swiper-slide .text_sec .title_sec .cart {
-    width: 3.2rem;
-    height: 3.2rem;
-}
-
-.best_seller .swiper-wrapper .swiper-slide .text_sec .title_sec .cart a {
-    display: block;
-    height: 100%;
-}
-
-.best_seller .swiper-wrapper .swiper-slide .text_sec .title_sec .cart a img {
-    height: 100%;
-}
-
 .best_seller .swiper-wrapper .swiper-slide .text_sec .des_wrap {
     width: 100%;
     padding: 1rem;
@@ -497,20 +484,6 @@ font-size:10px로 초기값 설정. */
     display: flex;
     justify-content: space-between;
     padding: 1rem;
-}
-
-.new_arrivals .swiper-wrapper .swiper-slide .text_sec .title_sec .cart {
-    width: 3.2rem;
-    height: 3.2rem;
-}
-
-.new_arrivals .swiper-wrapper .swiper-slide .text_sec .title_sec .cart a {
-    display: block;
-    height: 100%;
-}
-
-.new_arrivals .swiper-wrapper .swiper-slide .text_sec .title_sec .cart a img {
-    height: 100%;
 }
 
 .new_arrivals .swiper-wrapper .swiper-slide .text_sec .des_sec {
@@ -874,6 +847,36 @@ font-size:10px로 초기값 설정. */
 
 
 
+@media screen and (max-width: 550px) {
+
+    .best_seller h2,
+    .new_arrivals h2 {
+       /*  font-size: */ /* 2.33rem; */
+        /* (최소폰트인 14px설정) */
+    }
+
+    .best_seller .swiper-wrapper .swiper-slide .text_sec,
+    .new_arrivals .swiper-wrapper .swiper-slide .text_sec {
+/*         position: relative; */
+    }
+
+    .best_seller .swiper-wrapper .swiper-slide .text_sec .title_sec::before,
+    .new_arrivals .swiper-wrapper .swiper-slide .text_sec .title_sec::before {
+/*         content: '';
+        width: 2.5rem;
+        height: 2.5rem;
+        background: url(../img/icon/cart.png) right / 100% no-repeat;
+        position: absolute;
+        top: 1.4rem;
+        right: 0.8rem; */
+    }
+
+}
+
+/* 해상도 550px이하일 때 */
+
+
+
 @media screen and (max-width: 480px) {
 
     html,
@@ -899,27 +902,29 @@ font-size:10px로 초기값 설정. */
     }
 
 
-.tea_type .inner .list {
-    flex-wrap: wrap;
-    height: auto;
-    row-gap: 3.2rem;
+    .tea_type .inner .list {
+        flex-wrap: wrap;
+        height: auto;
+        row-gap: 3.2rem;
+    }
+
+    .tea_type .inner .list .image_section {
+        width: 100%;
+        order: -1;
+        /* 텍스트보다 앞에 배치. (기준:0 숫자가 작을수록 앞에 배치) */
+    }
+
+    .tea_type .inner .list .image_section img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+    }
+
+    .tea_type .inner .list .text_section {
+        width: 100%;
+    }
 }
 
-.tea_type .inner .list .image_section {
-    width: 100%;
-    order: -1;
-    /* 텍스트보다 앞에 배치. (기준:0 숫자가 작을수록 앞에 배치) */
-}
-
-.tea_type .inner .list .image_section img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-}
-
-.tea_type .inner .list .text_section {
-    width: 100%;
-}
-}/* 해상도 480px이하일 때 */
+/* 해상도 480px이하일 때 */
 
 
 
@@ -931,5 +936,3 @@ font-size:10px로 초기값 설정. */
     /* 14 / 6 -> 2.33 */
 }
 
-
-/* 해상도 480px이하일 때 */
